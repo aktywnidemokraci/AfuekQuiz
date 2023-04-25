@@ -39,14 +39,14 @@ io.on("connection", (socket) => {
             } else {
                 callback({
                     code: "ROOMERROR",
-                    msg: `Room name ${config.room} is taken. Please try another name.`
+                    msg: `Nazwa pokoju ${config.room} jest zajęta. Wybierz inną nazwę.`
                 })
 
             }
         } else {
             callback({
                 code: "ROOMERROR",
-                msg: `Cannot use empty string for room name.`
+                msg: `Nazwa pokoju nie może być pusta.`
             })
         }
     });
@@ -57,7 +57,7 @@ io.on("connection", (socket) => {
             if (g && g.active) {
                 return callback({
                     code: "NAMEERROR",
-                    msg: `Cannot join room ${config.name}. Game has already started.`
+                    msg: `Nie możesz dołączyć do pokoju ${config.name}. Gra już się rozpoczęła.`
                 });
             };
 
@@ -73,19 +73,19 @@ io.on("connection", (socket) => {
                 } else {
                     callback({
                         code: "NAMEERROR",
-                        msg: `${config.name} is already being used in room: ${config.room}`
+                        msg: `${config.name} ta nazwa jest już używana w pokoju: ${config.room}`
                     });
                 }
             } else {
                 callback({
                     code: "NAMEERROR",
-                    msg: "Room does not exist!"
+                    msg: "Pokój nie istnieje, zwróć uwagę na pisownię i wielkość liter!"
                 });
             };
         } else {
             callback({
                 code: "NAMEERROR",
-                msg: `Please enter both the room name and username.`
+                msg: `Wprowadź kod pokoju oraz nazwę gracza.`
             });
         }
     })
@@ -106,7 +106,7 @@ io.on("connection", (socket) => {
             } else {
                 callback({
                     code: "STARTERROR",
-                    msg: "Not enough players to start the game."
+                    msg: "Nie wystarczająca liczba graczy do rozpoczęcia gry."
                 });
             }
 
