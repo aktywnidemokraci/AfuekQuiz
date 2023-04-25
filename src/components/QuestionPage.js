@@ -81,7 +81,7 @@ export class QuestionPage extends React.Component {
                                 }
 
                                 <div className="list-button">
-                                    <button className="button" onClick={this.handleReset}>Start Again</button>
+                                    <button className="button" onClick={this.handleReset}>Nowa Gra</button>
                                 </div>
                             
                             </div>
