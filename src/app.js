@@ -35,7 +35,7 @@ socket.on("ALL-DISCONNECT", () => {
       store.dispatch(resetType());
       socket.disconnect();
       socket.connect();
-      alert("All players disconnected. Taking you back to the home page.")
+      alert("Wszyscy gracze rozłączyli się. Powrót na stronę główną.")
       history.push("/");
    }
 });
@@ -48,7 +48,7 @@ socket.on("HOST-DISCONNECT", () => {
       store.dispatch(resetType());
       socket.disconnect();
       socket.connect();
-      alert("Host Disconnected. Taking you back to the home page.")
+      alert("Administrator gry rozłączył się. TPowrót na stronę główną.")
       history.push("/");
    }
 });
