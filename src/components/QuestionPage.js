@@ -16,9 +16,9 @@ export class QuestionPage extends React.Component {
         socket.emit("submitAnswer", ans, (res) => {
 
             if (res.code === "correct") {
-                this.props.setMessage(`Correct. Your score is ${res.score}`);
+                this.props.setMessage(`Brawo, punkt dla Ciebie. Twoja punktacja ${res.score}`);
             } else if (res.code === "incorrect") {
-                this.props.setMessage(`Incorrect, The correct answer was ${res.correct}. Your score is ${res.score}`);
+                this.props.setMessage(`Niestety, brak punktu, prawidłowa odpowiedź to ${res.correct}. Twoja punktacja ${res.score}`);
             }
         });
     };
@@ -65,8 +65,8 @@ export class QuestionPage extends React.Component {
                             <div className="scoreboard">
 
                                 <div className="list-item">
-                                    <h3>Player</h3>
-                                    <h3>Score</h3>
+                                    <h3>Gracz</h3>
+                                    <h3>Punkty</h3>
                                 </div>
                                 
                                 {
