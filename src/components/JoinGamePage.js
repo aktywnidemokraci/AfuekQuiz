@@ -68,7 +68,7 @@ export class JoinGamePage extends React.Component {
 
                             <input
                                 type="text"
-                                placeholder="Room Name"
+                                placeholder="Nazwa Pokoju"
                                 autoFocus
                                 value={this.state.room}
                                 onChange={this.onRoomChange}
@@ -77,7 +77,7 @@ export class JoinGamePage extends React.Component {
 
                             <input
                                 type="text"
-                                placeholder="User Name"
+                                placeholder="Nazwa Gracza"
                                 value={this.state.name}
                                 onChange={this.onNameChange}
                                 className="text-input"
