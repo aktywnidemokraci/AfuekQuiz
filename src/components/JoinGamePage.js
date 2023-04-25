@@ -63,7 +63,7 @@ export class JoinGamePage extends React.Component {
                 <div className="box-layout__box">
                     <Fade>
                         <form className="form" onSubmit={this.submitForm}>
-                            <h1 className={"box-layout__title"}>Join Game</h1>
+                            <h1 className={"box-layout__title"}>Dołącz do gry</h1>
                             {this.state.error && <p className="form__error">{this.state.error}</p>}
 
                             <input
@@ -90,7 +90,7 @@ export class JoinGamePage extends React.Component {
                                 />
                             </div>
 
-                            <button className="button">Join</button>
+                            <button className="button">Dołącz</button>
 
 
 
