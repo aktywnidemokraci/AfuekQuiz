@@ -98,6 +98,7 @@ export class CreateGamePage extends React.Component {
                                 <option key="5" value="5">5 Pytań</option>
                                 <option key="10" value="10">10 Pytań</option>
                                 <option key="15" value="15">15 Pytań</option>
+                                <option key="20" value="20">20 Pytań</option>
                             </select>
                             <button className="button">Utwórz</button>
 
